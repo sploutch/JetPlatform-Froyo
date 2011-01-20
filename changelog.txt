@@ -1,0 +1,32 @@
+default.prop
+	correct ADDITIONAL_DEFAULT_PROPERTIES
+
+init.rc
+	AutoMount USB
+
+zImage
+	january 11th "experimental-2.6.29-dopi"
+
+/data/data/com.android.providers.settings
+	screen timed out -> 30 minutes
+
+/system/app/ADW.Launcher_v1.1.5_standalone.apk
+	better launcher
+
+/system/app/FileManager.apk
+	navigate to your file simply
+
+/system/bin/dbus-deamon
+	missing binary (add from cyanogenmod)
+
+/system/bin/dd
+	missing binary (add from cyanogenmod)
+
+/system/etc/vold.fstab
+	mount fat partition
+
+/system/usr/keylayout/qwerty.kl
+	correct keymap
+
+/system/build.prop
+	many build properties
