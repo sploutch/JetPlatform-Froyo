@@ -1,0 +1,4 @@
+git clone -n git://github.com/sploutch/JetPlatform-Froyo.git
+cd JetPlatform-Froyo
+git checkout
+
