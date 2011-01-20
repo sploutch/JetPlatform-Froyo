@@ -30,3 +30,6 @@ zImage
 
 /system/build.prop
 	many build properties
+
+/system/lib/hw/sensors.GT-S8000.so
+	file for the motion sensor
