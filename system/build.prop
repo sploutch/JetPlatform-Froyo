@@ -52,3 +52,4 @@ xmpp.auto-presence=true
 ro.config.nocheckin=yes
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
+
