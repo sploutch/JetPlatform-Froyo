@@ -39,7 +39,7 @@ rild.libargs=-d /dev/ttyS0
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
-ro.sf.lcd_density=200
+ro.sf.lcd_density=240
 ro.config.notification_sound=OnTheHunt.ogg
 ro.config.alarm_alert=Alarm_Classic.ogg
 media.stagefright.enable-player=true
