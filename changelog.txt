@@ -37,6 +37,3 @@ zImage
 /system/lib/hw/sensors.GT-S8000.so
 	library for the motion sensor
 
-/system/lib/hw/gralloc.default.so
-	update library from Thijs/MadRocker
-
