@@ -1,11 +1,14 @@
 default.prop
 	correct ADDITIONAL_DEFAULT_PROPERTIES
 
+init
+	KB's init for motion sensor with apps
+
 init.rc
 	AutoMount USB
 
 zImage
-	january 11th "experimental-2.6.29-dopi"
+	january 28th "experimental-2.6.29-dopi" with working motion sensor
 
 /data/data/com.android.providers.settings
 	screen timed out -> 30 minutes
@@ -33,3 +36,7 @@ zImage
 
 /system/lib/hw/sensors.GT-S8000.so
 	library for the motion sensor
+
+/system/lib/hw/gralloc.default.so
+	update library from Thijs/MadRocker
+
