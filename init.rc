@@ -15,14 +15,34 @@ loglevel 3
     export ANDROID_DATA /data
     export EXTERNAL_STORAGE /mnt/sdcard
     export ASEC_MOUNTPOINT /mnt/asec
-    export SD_EXT_DIRECTORY /sd-ext
     export BOOTCLASSPATH /system/framework/core.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/android.policy.jar:/system/framework/services.jar
     export TERMINFO /system/etc/terminfo
+
+############## MadRcoker ################
+#rc_parallel="YES"					
+######################################
 
 # Backward compatibility
     symlink /system/etc /etc
     symlink /sys/kernel/debug /d
 
+############## insert modules####################
+    insmod /system/lib/modules/btgpio.ko
+    insmod /system/lib/modules/dhd.ko
+    insmod /system/lib/modules/dpram.ko
+    insmod /system/lib/modules/multipdp.ko
+    insmod /system/lib/modules/param.ko
+    insmod /system/lib/modules/rfs.ko
+    insmod /system/lib/modules/s3c_camera.ko
+    insmod /system/lib/modules/s3c_cmm.ko
+    insmod /system/lib/modules/s3c_g2d_driver.ko
+    insmod /system/lib/modules/s3c_g3d.ko
+    insmod /system/lib/modules/s3c_jpeg.ko
+    insmod /system/lib/modules/s3c_mfc.ko
+    insmod /system/lib/modules/s3c_pp.ko
+    insmod /system/lib/modules/s3c_rotator.ko
+    insmod /system/lib/modules/vibrator.ko
+######################################################
 # create mountpoints
     mkdir /mnt 0775 root system
     mkdir /mnt/sdcard 0000 system system
@@ -136,13 +156,14 @@ loglevel 3
     chmod 0440 /proc/kmsg
     chown root system /proc/sysrq-trigger
     chmod 0220 /proc/sysrq-trigger
-
+######################KB######################"
 # create basic filesystem structure
-    mkdir /data/misc 01771 system misc
-    mkdir /data/misc/bluetoothd 0770 bluetooth bluetooth
-    mkdir /data/misc/bluetooth 0770 system system
-    mkdir /data/misc/keystore 0700 keystore keystore
-    mkdir /data/misc/vpn 0770 system system
+    mkdir /data/misc 01777 system misc
+    mkdir /data/misc/bluetoothd 0777 bluetooth bluetooth
+    mkdir /data/misc/bluetooth 0777 system system
+    mkdir /data/misc/keystore 0707 keystore keystore
+    mkdir /data/misc/vpn 0777 system system
+################################################
     mkdir /data/misc/systemkeys 0700 system system
     mkdir /data/misc/vpn/profiles 0770 system system
 
@@ -154,24 +175,24 @@ chmod 0660 /data/misc/wifi/wpa_supplicant.conf
 
 
 ####################################################################################
-#                 JetDroid Wifi
+#                 JetDroid Wifi + KB
 ####################################################################################
 #
 #    #mkdir /system/etc/wifi 0770 wifi wifi
-#    chmod 0770 /system/etc/wifi
-#    chmod 0660 /system/etc/wifi/wpa_supplicant.conf
+#    chmod 0777 /system/etc/wifi
+#    chmod 0666 /system/etc/wifi/wpa_supplicant.conf
 #    chown wifi wifi /system/etc/wifi/wpa_supplicant.conf
 #
 #    #wpa_supplicant control socket for android wifi.c (android private socket)
-#    mkdir /data/misc/wifi 0770 wifi wifi
-#    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-#    chmod 0770 /data/misc/wifi
-#    chmod 0660 /data/misc/wifi/wpa_supplicant.conf
+#    mkdir /data/misc/wifi 0777 wifi wifi
+#    mkdir /data/misc/wifi/sockets 0777 wifi wifi
+#    chmod 0777 /data/misc/wifi
+#    chmod 0666 /data/misc/wifi/wpa_supplicant.conf
 #    chown wifi wifi /data/misc/wifi
 #    chown wifi wifi /data/misc/wifi/wpa_supplicant.conf
 #
-#    mkdir /data/misc/dhcp 0770 wifi wifi
-#    chmod 0770 /data/misc/dhcp
+#    mkdir /data/misc/dhcp 0777 wifi wifi
+#    chmod 0777 /data/misc/dhcp
 #    chown dhcp dhcp /data/misc/dhcp
 #
 #####################################################################################
@@ -207,11 +228,13 @@ chmod 0660 /data/misc/wifi/wpa_supplicant.conf
     # allow net_raw to have access to /dev/socket directory
     chown root net_raw /dev/socket
     chmod 0775 /dev/socket
+
 #######################AutoMount USB##############################
 
     write /sys/devices/platform/s3c6410-usbgadget/gadget/lun0/file /dev/block/mmcblk0
 
 ##################################################################
+
 on boot
 # basic network init
     ifup lo
@@ -220,29 +243,31 @@ on boot
 
 # set RLIMIT_NICE to allow priorities from 19 to -20
     setrlimit 13 40 40
-
+#####################MadRocker##########################
 # Define the oom_adj values for the classes of processes that can be
 # killed by the kernel.  These are used in ActivityManagerService.
     setprop ro.FOREGROUND_APP_ADJ 0
     setprop ro.VISIBLE_APP_ADJ 1
-    setprop ro.SECONDARY_SERVER_ADJ 2
-    setprop ro.BACKUP_APP_ADJ 2
-    setprop ro.HOME_APP_ADJ 4
+    setprop ro.PERCEPTIBLE_APP_ADJ 2
+    setprop ro.HEAVY_WEIGHT_APP_ADJ 3
+    setprop ro.SECONDARY_SERVER_ADJ 4
+    setprop ro.BACKUP_APP_ADJ 5
+    setprop ro.HOME_APP_ADJ 6
     setprop ro.HIDDEN_APP_MIN_ADJ 7
-    setprop ro.CONTENT_PROVIDER_ADJ 14
-    setprop ro.EMPTY_APP_ADJ 15
+    setprop ro.EMPTY_APP_ADJ 15	
 
 # Define the memory thresholds at which the above process classes will
 # be killed.  These numbers are in pages (4k).
     setprop ro.FOREGROUND_APP_MEM 1536
     setprop ro.VISIBLE_APP_MEM 2048
-    setprop ro.SECONDARY_SERVER_MEM 4096
+    setprop ro.PERCEPTIBLE_APP_MEM 2048	
+    setprop ro.HEAVY_WEIGHT_APP_MEM 3072
+    setprop ro.SECONDARY_SERVER_MEM 3072
     setprop ro.BACKUP_APP_MEM 4096
     setprop ro.HOME_APP_MEM 4096
     setprop ro.HIDDEN_APP_MEM 5120
-    setprop ro.CONTENT_PROVIDER_MEM 5632
     setprop ro.EMPTY_APP_MEM 6144
-
+#######################################################
 ##################WIFI###########################
 #
 #    setprop wifi.interface "eth0"
@@ -253,12 +278,13 @@ on boot
 # Write value must be consistent with the above properties.
 # Note that the driver only supports 6 slots, so we have HOME_APP at the
 # same memory level as services.
-    write /sys/module/lowmemorykiller/parameters/adj 0,1,2,7,14,15
-
+##############MadRocker#####################
+    write /sys/module/lowmemorykiller/parameters/adj 0,1,2,4,7,15
+############################################
     write /proc/sys/vm/overcommit_memory 1
     write /proc/sys/vm/min_free_order_shift 4
-    write /sys/module/lowmemorykiller/parameters/minfree 1536,2048,4096,5120,5632,6144
 
+    write /sys/module/lowmemorykiller/parameters/minfree 1536,2048,4096,5120,5632,6144
     # Set init its forked children's oom_adj.
     write /proc/1/oom_adj -16
 
@@ -333,6 +359,76 @@ on boot
 
     class_start default
 
+################KB####################
+    chown system system /dev/akm8973_aot
+    chown system system /dev/akm8973_daemon
+    chmod 0777 /dev/akm8973_aot
+    chmod 0777 /dev/akm8973_daemon
+    chmod 0777 /dev/input/event2
+    chmod 0777 /dev/input/event3
+
+    chmod 0777 /dev/s3c-g2d
+    chmod 0777 /dev/s3c-g3d
+
+    chmod 777 /dev/*
+
+    chmod 0777 /dev/dun
+    chmod 0777 /dev/vibrator
+    chmod 0777 /dev/dpramerr
+    chmod 0777 /dev/ppp
+    chmod 0777 /dev/ttyCIQ0
+    chmod 0777 /dev/ttyTRFB0
+    chmod 0777 /dev/ttyCDMA0
+    chmod 0777 /dev/ttyCSD0
+    chmod 0777 /dev/dpram1
+    chmod 0777 /dev/dpram0
+    chmod 0777 /dev/multipdp
+    chmod 0777 /dev/console
+    chmod 0777 /dev/graphics
+    chmod 0777 /dev/network_throughput
+    chmod 0777 /dev/network_latency
+    chmod 0777 /dev/cpu_dma_latency
+    chmod 0777 /dev/bt_wlan_gpio
+    chmod 0777 /dev/s3c-rotator
+    chmod 0777 /dev/s3c-cmm
+    chmod 0777 /dev/s3c-g3d
+    chmod 0777 /dev/s3c-g2d
+    chmod 0777 /dev/s3c-jpg
+    chmod 0777 /dev/s3c-pp
+    chmod 0777 /dev/s3c-mfc
+    chmod 0777 /dev/pmem_jpeg
+    chmod 0777 /dev/pmem_picture
+    chmod 0777 /dev/pmem_preview
+    chmod 0777 /dev/pmem_stream2
+    chmod 0777 /dev/pmem_stream
+    chmod 0777 /dev/pmem_render
+    chmod 0777 /dev/pmem
+    chmod 0777 /dev/ams320fs01
+    chmod 0777 /dev/ashmem
+    chmod 0777 /dev/s3c-mem
+    chmod 0777 /dev/kmsg
+    chmod 0777 /dev/urandom
+    chmod 0777 /dev/random
+    chmod 0777 /dev/full
+    chmod 0777 /dev/zero
+    chmod 0777 /dev/null
+    chmod 0777 /dev/kmem
+    chmod 0777 /dev/mem
+    chmod 0777 /dev/s3c_serial2
+    chmod 0777 /dev/s3c_serial1
+    chmod 0777 /dev/s3c_serial0
+    chmod 0777 /dev/rtc0
+    chmod 0777 /dev/ttygs0
+    chmod 0777 /dev/i2c-5
+    chmod 0777 /dev/i2c-4
+    chmod 0777 /dev/i2c-3
+    chmod 0777 /dev/i2c-2
+    chmod 0777 /dev/i2c-0
+    chmod 0777 /dev/block
+    chmod 0777 /dev/socket
+    chmod 0777 /dev/pts
+############################################
+
 ## Daemon processes to be run by init.
 ##
 service console /system/bin/sh
@@ -402,13 +498,21 @@ service dbus /system/bin/dbus-daemon --system --nofork
     user bluetooth
     group bluetooth net_bt_admin
 
-service bluetoothd /system/bin/bluetoothd -n
-    socket bluetooth stream 660 bluetooth bluetooth
-    socket dbus_bluetooth stream 660 bluetooth bluetooth
-    # init.rc does not yet support applying capabilities, so run as root and
-    # let bluetoothd drop uid to bluetooth with the right linux capabilities
-    group bluetooth net_bt_admin misc
-    disabled
+#######################KB#######################
+service hciattach /system/bin/logwrapper /system/bin/hciattach -s 115200 /dev/s3c_serial1 any 115200 flow
+         user root
+         group bluetooth net_bt_admin
+         disabled
+         oneshot
+
+service bluetoothd /system/bin/logwrapper /system/bin/bluetoothd -n /etc/bluez/main.conf
+       socket bluetooth stream 666 bluetooth bluetooth
+       socket dbus_bluetooth stream 666 bluetooth bluetooth
+       # init.rc does not yet support applying capabilities, so run as root and
+       # let hcid drop uid to bluetooth with the right linux capabilities
+       group bluetooth net_bt_admin misc
+       disabled
+#####################KB###############################
 
 service hfag /system/bin/sdptool add --channel=10 HFAG
     user bluetooth
@@ -470,7 +574,7 @@ service dumpstate /system/bin/dumpstate -s
 ####################################################################################
 #                 JetDroid Wifi
 ####################################################################################
-
+#
 #service wpa_supplicant /system/bin/wpa_supplicant -dd -Dwext -ieth0 -c /data/misc/wifi/#wpa_supplicant.conf
 #    socket wpa_eth0 dgram 666 wifi wifi
 #    group system wifi inet
@@ -481,5 +585,5 @@ service dumpstate /system/bin/dumpstate -s
 #    group system dhcp
 #    disabled
 #    oneshot
-
+#
 ####################################################################################

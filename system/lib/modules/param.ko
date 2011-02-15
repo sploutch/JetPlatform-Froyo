@@ -1,0 +1,837 @@
+
+    
+
+  
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>param/param.ko at master from Xmister's i5700-xmister-kmodules-2.6.35 - GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+
+    <link href="https://assets2.github.com/stylesheets/bundle_common.css?47cb04938970e27960b000394e25d106da82d0b6" media="screen" rel="stylesheet" type="text/css" />
+<link href="https://assets1.github.com/stylesheets/bundle_github.css?47cb04938970e27960b000394e25d106da82d0b6" media="screen" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" charset="utf-8">
+      var GitHub = {}
+      var github_user = null
+      
+    </script>
+    <script src="https://assets0.github.com/javascripts/jquery/jquery-1.4.2.min.js?47cb04938970e27960b000394e25d106da82d0b6" type="text/javascript"></script>
+    <script src="https://assets0.github.com/javascripts/bundle_common.js?47cb04938970e27960b000394e25d106da82d0b6" type="text/javascript"></script>
+<script src="https://assets1.github.com/javascripts/bundle_github.js?47cb04938970e27960b000394e25d106da82d0b6" type="text/javascript"></script>
+
+
+        <script type="text/javascript" charset="utf-8">
+      GitHub.spy({
+        repo: "Xmister/i5700-xmister-kmodules-2.6.35"
+      })
+    </script>
+
+    
+  
+    
+  
+
+  <link href="https://github.com/Xmister/i5700-xmister-kmodules-2.6.35/commits/master.atom" rel="alternate" title="Recent Commits to i5700-xmister-kmodules-2.6.35:master" type="application/atom+xml" />
+
+        <meta name="description" content="Ported Spica kernel modules to 2.6.35" />
+    <script type="text/javascript">
+      GitHub.nameWithOwner = GitHub.nameWithOwner || "Xmister/i5700-xmister-kmodules-2.6.35";
+      GitHub.currentRef = 'master';
+      GitHub.commitSHA = "d1a3307f43b55f8c229238876420701a6caef81a";
+      GitHub.currentPath = "param/param.ko";
+      GitHub.masterBranch = "master";
+
+      
+    </script>
+  
+
+            <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3769691-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+      })();
+    </script>
+
+  </head>
+
+  
+
+  <body class="logged_out ">
+    
+
+    
+      <script type="text/javascript">
+        var _kmq = _kmq || [];
+        function _kms(u){
+          var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;
+          s.src = u; f.parentNode.insertBefore(s, f);
+        }
+        _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/406e8bf3a2b8846ead55afb3cfaf6664523e3a54.1.js');
+      </script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="subnavd" id="main">
+      <div id="header" class="true">
+        
+          <a class="logo boring" href="https://github.com">
+            <img src="/images/modules/header/logov3.png?changed" class="default" alt="github" />
+            <![if !IE]>
+            <img src="/images/modules/header/logov3-hover.png" class="hover" alt="github" />
+            <![endif]>
+          </a>
+        
+        
+        <div class="topsearch">
+  
+    <ul class="nav logged_out">
+      <li class="pricing"><a href="/plans">Pricing and Signup</a></li>
+      <li><a href="/explore">Explore GitHub</a></li>
+      <li><a href="/features">Features</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="https://github.com/login">Login</a></li>
+    </ul>
+  
+</div>
+
+      </div>
+
+      
+      
+        
+    <div class="site">
+      <div class="pagehead repohead vis-public   ">
+
+      
+
+      <div class="title-actions-bar">
+        <h1>
+          <a href="/Xmister">Xmister</a> / <strong><a href="https://github.com/Xmister/i5700-xmister-kmodules-2.6.35">i5700-xmister-kmodules-2.6.35</a></strong>
+          
+          
+        </h1>
+
+        
+    <ul class="actions">
+      
+
+      
+        <li class="for-owner" style="display:none"><a href="https://github.com/Xmister/i5700-xmister-kmodules-2.6.35/admin" class="minibutton btn-admin "><span><span class="icon"></span>Admin</span></a></li>
+        <li>
+          <a href="/Xmister/i5700-xmister-kmodules-2.6.35/toggle_watch" class="minibutton btn-watch " id="watch_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'eae90876e721e2c1c367282e5f5325e2d23cf9bb'); f.appendChild(s);f.submit();return false;" style="display:none"><span><span class="icon"></span>Watch</span></a>
+          <a href="/Xmister/i5700-xmister-kmodules-2.6.35/toggle_watch" class="minibutton btn-watch " id="unwatch_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'eae90876e721e2c1c367282e5f5325e2d23cf9bb'); f.appendChild(s);f.submit();return false;" style="display:none"><span><span class="icon"></span>Unwatch</span></a>
+        </li>
+        
+          
+            <li class="for-notforked" style="display:none"><a href="/Xmister/i5700-xmister-kmodules-2.6.35/fork" class="minibutton btn-fork " id="fork_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'eae90876e721e2c1c367282e5f5325e2d23cf9bb'); f.appendChild(s);f.submit();return false;"><span><span class="icon"></span>Fork</span></a></li>
+            <li class="for-hasfork" style="display:none"><a href="#" class="minibutton btn-fork " id="your_fork_button"><span><span class="icon"></span>Your Fork</span></a></li>
+          
+
+          
+        
+      
+      
+      <li class="repostats">
+        <ul class="repo-stats">
+          <li class="watchers"><a href="/Xmister/i5700-xmister-kmodules-2.6.35/watchers" title="Watchers" class="tooltipped downwards">3</a></li>
+          <li class="forks"><a href="/Xmister/i5700-xmister-kmodules-2.6.35/network" title="Forks" class="tooltipped downwards">1</a></li>
+        </ul>
+      </li>
+    </ul>
+
+      </div>
+
+        
+  <ul class="tabs">
+    <li><a href="https://github.com/Xmister/i5700-xmister-kmodules-2.6.35" class="selected" highlight="repo_source">Source</a></li>
+    <li><a href="https://github.com/Xmister/i5700-xmister-kmodules-2.6.35/commits/master" highlight="repo_commits">Commits</a></li>
+    <li><a href="/Xmister/i5700-xmister-kmodules-2.6.35/network" highlight="repo_network">Network</a></li>
+    <li><a href="/Xmister/i5700-xmister-kmodules-2.6.35/pulls" highlight="repo_pulls">Pull Requests (0)</a></li>
+
+    
+
+    
+      
+      <li><a href="/Xmister/i5700-xmister-kmodules-2.6.35/issues" highlight="issues">Issues (0)</a></li>
+    
+
+            
+    <li><a href="/Xmister/i5700-xmister-kmodules-2.6.35/graphs" highlight="repo_graphs">Graphs</a></li>
+
+    <li class="contextswitch nochoices">
+      <span class="toggle leftwards" >
+        <em>Branch:</em>
+        <code>master</code>
+      </span>
+    </li>
+  </ul>
+
+  <div style="display:none" id="pl-description"><p><em class="placeholder">click here to add a description</em></p></div>
+  <div style="display:none" id="pl-homepage"><p><em class="placeholder">click here to add a homepage</em></p></div>
+
+  <div class="subnav-bar">
+  
+  <ul>
+    <li>
+      <a href="#" class="dropdown">Switch Branches (1)</a>
+      <ul>
+        
+          
+            <li><strong>master &#x2713;</strong></li>
+            
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="dropdown defunct">Switch Tags (0)</a>
+      
+    </li>
+    <li>
+    
+    <a href="/Xmister/i5700-xmister-kmodules-2.6.35/branches" class="manage">Branch List</a>
+    
+    </li>
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+  
+
+
+
+        
+    <div id="repo_details" class="metabox clearfix">
+      <div id="repo_details_loader" class="metabox-loader" style="display:none">Sending Request&hellip;</div>
+
+        <a href="/Xmister/i5700-xmister-kmodules-2.6.35/downloads" class="download-source" id="download_button" title="Download source, tagged packages and binaries."><span class="icon"></span>Downloads</a>
+
+      <div id="repository_desc_wrapper">
+      <div id="repository_description" rel="repository_description_edit">
+        
+          <p>Ported Spica kernel modules to 2.6.35
+            <span id="read_more" style="display:none">&mdash; <a href="#readme">Read more</a></span>
+          </p>
+        
+      </div>
+
+      <div id="repository_description_edit" style="display:none;" class="inline-edit">
+        <form action="/Xmister/i5700-xmister-kmodules-2.6.35/admin/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="eae90876e721e2c1c367282e5f5325e2d23cf9bb" /></div>
+          <input type="hidden" name="field" value="repository_description">
+          <input type="text" class="textfield" name="value" value="Ported Spica kernel modules to 2.6.35">
+          <div class="form-actions">
+            <button class="minibutton"><span>Save</span></button> &nbsp; <a href="#" class="cancel">Cancel</a>
+          </div>
+        </form>
+      </div>
+
+      
+      <div class="repository-homepage" id="repository_homepage" rel="repository_homepage_edit">
+        <p><a href="http://" rel="nofollow"></a></p>
+      </div>
+
+      <div id="repository_homepage_edit" style="display:none;" class="inline-edit">
+        <form action="/Xmister/i5700-xmister-kmodules-2.6.35/admin/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="eae90876e721e2c1c367282e5f5325e2d23cf9bb" /></div>
+          <input type="hidden" name="field" value="repository_homepage">
+          <input type="text" class="textfield" name="value" value="">
+          <div class="form-actions">
+            <button class="minibutton"><span>Save</span></button> &nbsp; <a href="#" class="cancel">Cancel</a>
+          </div>
+        </form>
+      </div>
+      </div>
+      <div class="rule "></div>
+            <div id="url_box" class="url-box">
+        <ul class="clone-urls">
+          
+            
+            <li id="http_clone_url"><a href="https://github.com/Xmister/i5700-xmister-kmodules-2.6.35.git" data-permissions="Read-Only">HTTP</a></li>
+            <li id="public_clone_url"><a href="git://github.com/Xmister/i5700-xmister-kmodules-2.6.35.git" data-permissions="Read-Only">Git Read-Only</a></li>
+          
+          
+        </ul>
+        <input type="text" spellcheck="false" id="url_field" class="url-field" />
+              <span style="display:none" id="url_box_clippy"></span>
+      <span id="clippy_tooltip_url_box_clippy" class="clippy-tooltip tooltipped" title="copy to clipboard">
+      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+              width="14"
+              height="14"
+              class="clippy"
+              id="clippy" >
+      <param name="movie" value="https://assets3.github.com/flash/clippy.swf?v5"/>
+      <param name="allowScriptAccess" value="always" />
+      <param name="quality" value="high" />
+      <param name="scale" value="noscale" />
+      <param NAME="FlashVars" value="id=url_box_clippy&amp;copied=&amp;copyto=">
+      <param name="bgcolor" value="#FFFFFF">
+      <param name="wmode" value="opaque">
+      <embed src="https://assets3.github.com/flash/clippy.swf?v5"
+             width="14"
+             height="14"
+             name="clippy"
+             quality="high"
+             allowScriptAccess="always"
+             type="application/x-shockwave-flash"
+             pluginspage="http://www.macromedia.com/go/getflashplayer"
+             FlashVars="id=url_box_clippy&amp;copied=&amp;copyto="
+             bgcolor="#FFFFFF"
+             wmode="opaque"
+      />
+      </object>
+      </span>
+
+        <p id="url_description">This URL has <strong>Read+Write</strong> access</p>
+      </div>
+    </div>
+
+
+        
+
+      </div><!-- /.pagehead -->
+
+      
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  GitHub.downloadRepo = '/Xmister/i5700-xmister-kmodules-2.6.35/archives/master'
+  GitHub.revType = "master"
+
+  GitHub.controllerName = "blob"
+  GitHub.actionName     = "show"
+  GitHub.currentAction  = "blob#show"
+
+  
+
+  
+</script>
+
+
+
+
+
+
+
+
+  <div id="commit">
+    <div class="group">
+        
+  <div class="envelope commit">
+    <div class="human">
+      
+        <div class="message"><pre><a href="/Xmister/i5700-xmister-kmodules-2.6.35/commit/d1a3307f43b55f8c229238876420701a6caef81a">Every module ported, except camera</a> </pre></div>
+      
+
+      <div class="actor">
+        <div class="gravatar">
+          
+          <img src="https://secure.gravatar.com/avatar/53b4a9762444b38c529490ec3d18188b?s=140&d=https%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png" alt="" width="30" height="30"  />
+        </div>
+        <div class="name"><a href="/Xmister">Xmister</a> <span>(author)</span></div>
+        <div class="date">
+          <abbr class="relatize" title="2010-12-04 21:05:09">Sat Dec 04 21:05:09 -0800 2010</abbr>
+        </div>
+      </div>
+
+      
+
+    </div>
+    <div class="machine">
+      <span>c</span>ommit&nbsp;&nbsp;<a href="/Xmister/i5700-xmister-kmodules-2.6.35/commit/d1a3307f43b55f8c229238876420701a6caef81a" hotkey="c">d1a3307f43b55f8c2292</a><br />
+      <span>t</span>ree&nbsp;&nbsp;&nbsp;&nbsp;53f6b98085c2b5080074<br />
+      
+        <span>p</span>arent&nbsp;
+        
+        <a href="/Xmister/i5700-xmister-kmodules-2.6.35/tree/9349d2cc9b5b5e56500f6d429160b9fbdc5c6865/btgpio" hotkey="p">9349d2cc9b5b5e56500f</a>
+      
+
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+
+
+  <div id="slider">
+
+  
+    <div class="breadcrumb" data-path="param/param.ko/">
+      <b><a href="/Xmister/i5700-xmister-kmodules-2.6.35/tree/d1a3307f43b55f8c229238876420701a6caef81a">i5700-xmister-kmodules-2.6.35</a></b> / <a href="/Xmister/i5700-xmister-kmodules-2.6.35/tree/d1a3307f43b55f8c229238876420701a6caef81a/param">param</a> / param.ko       <span style="display:none" id="clippy_3472">param/param.ko</span>
+      
+      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+              width="110"
+              height="14"
+              class="clippy"
+              id="clippy" >
+      <param name="movie" value="https://assets3.github.com/flash/clippy.swf?v5"/>
+      <param name="allowScriptAccess" value="always" />
+      <param name="quality" value="high" />
+      <param name="scale" value="noscale" />
+      <param NAME="FlashVars" value="id=clippy_3472&amp;copied=copied!&amp;copyto=copy to clipboard">
+      <param name="bgcolor" value="#FFFFFF">
+      <param name="wmode" value="opaque">
+      <embed src="https://assets3.github.com/flash/clippy.swf?v5"
+             width="110"
+             height="14"
+             name="clippy"
+             quality="high"
+             allowScriptAccess="always"
+             type="application/x-shockwave-flash"
+             pluginspage="http://www.macromedia.com/go/getflashplayer"
+             FlashVars="id=clippy_3472&amp;copied=copied!&amp;copyto=copy to clipboard"
+             bgcolor="#FFFFFF"
+             wmode="opaque"
+      />
+      </object>
+      
+
+    </div>
+
+    <div class="frames">
+      <div class="frame frame-center" data-path="param/param.ko/">
+        <div id="files">
+          <div class="file">
+            <div class="meta">
+              <div class="info">
+                <span class="icon"><img alt="Txt" height="16" src="https://assets1.github.com/images/icons/txt.png?47cb04938970e27960b000394e25d106da82d0b6" width="16" /></span>
+                <span class="mode" title="File Mode">100644</span>
+                
+                  <span>42 lines (42 sloc)</span>
+                
+                <span>7.683 kb</span>
+              </div>
+              <ul class="actions">
+                
+                  <li><a class="file-edit-link" href="#" rel="/Xmister/i5700-xmister-kmodules-2.6.35/file-edit/__ref__/param/param.ko">edit</a></li>
+                
+                <li><a href="/Xmister/i5700-xmister-kmodules-2.6.35/raw/master/param/param.ko" id="raw-url">raw</a></li>
+                
+                  <li><a href="/Xmister/i5700-xmister-kmodules-2.6.35/blame/master/param/param.ko">blame</a></li>
+                
+                <li><a href="/Xmister/i5700-xmister-kmodules-2.6.35/commits/master/param/param.ko">history</a></li>
+              </ul>
+            </div>
+            
+  <div class="data type-plain">
+    
+      <table cellpadding="0" cellspacing="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="LID1" rel="#L1">1</span>
+<span id="LID2" rel="#L2">2</span>
+<span id="LID3" rel="#L3">3</span>
+<span id="LID4" rel="#L4">4</span>
+<span id="LID5" rel="#L5">5</span>
+<span id="LID6" rel="#L6">6</span>
+<span id="LID7" rel="#L7">7</span>
+<span id="LID8" rel="#L8">8</span>
+<span id="LID9" rel="#L9">9</span>
+<span id="LID10" rel="#L10">10</span>
+<span id="LID11" rel="#L11">11</span>
+<span id="LID12" rel="#L12">12</span>
+<span id="LID13" rel="#L13">13</span>
+<span id="LID14" rel="#L14">14</span>
+<span id="LID15" rel="#L15">15</span>
+<span id="LID16" rel="#L16">16</span>
+<span id="LID17" rel="#L17">17</span>
+<span id="LID18" rel="#L18">18</span>
+<span id="LID19" rel="#L19">19</span>
+<span id="LID20" rel="#L20">20</span>
+<span id="LID21" rel="#L21">21</span>
+<span id="LID22" rel="#L22">22</span>
+<span id="LID23" rel="#L23">23</span>
+<span id="LID24" rel="#L24">24</span>
+<span id="LID25" rel="#L25">25</span>
+<span id="LID26" rel="#L26">26</span>
+<span id="LID27" rel="#L27">27</span>
+<span id="LID28" rel="#L28">28</span>
+<span id="LID29" rel="#L29">29</span>
+<span id="LID30" rel="#L30">30</span>
+<span id="LID31" rel="#L31">31</span>
+<span id="LID32" rel="#L32">32</span>
+<span id="LID33" rel="#L33">33</span>
+<span id="LID34" rel="#L34">34</span>
+<span id="LID35" rel="#L35">35</span>
+<span id="LID36" rel="#L36">36</span>
+<span id="LID37" rel="#L37">37</span>
+<span id="LID38" rel="#L38">38</span>
+<span id="LID39" rel="#L39">39</span>
+<span id="LID40" rel="#L40">40</span>
+<span id="LID41" rel="#L41">41</span>
+<span id="LID42" rel="#L42">42</span>
+</pre>
+          </td>
+          <td width="100%">
+            
+              
+                <div class="highlight"><pre><div class='line' id='LC1'>ELF          (            0     4     (     å0Ÿå Rá   ÿ/ å Pã     ÿ/á$frrÿ/áğG-é pŸå @ ã € á  á` áP á á  ê0–å Sá  </div><div class='line' id='LC2'>P…âK„â Uã`†â@„â  </div><div class='line' id='LC3'>0‡àî=Câ Uã&lt;0CâñÿÿÚ 0“å Eâ Sáğÿÿ$‚à‰à„â</div><div class='line' id='LC4'>  á+ ãP…âşÿÿëK„â Uã`†â@„âêÿÿğ‡½è0–å 0Šåàÿÿê    ğE-é PQâĞMâp á9  </div><div class='line' id='LC5'>   ãşÿÿë ` á   ãşÿÿëÀå  \ã*  </div><div class='line' id='LC6'>0å Sã    0   $  ê ’å ‚â Qã  </div><div class='line' id='LC7'>0ƒâ Sáøÿÿ: Öå°Öá2€à’à€“åÁ@ áp‡à Qá‘à  š p ã  ã   ê‚T…à„à0 á  á€èşÿÿë  Pã</div><div class='line' id='LC8'>   Öå°0Öá@„à“à SáñÿÿŠ   ãĞâğ…½è 0 ãßÿÿê  Ÿå Ÿåşÿÿë àãöÿÿê ŸåŸåşÿÿë àãñÿÿê           p@-é ãşÿÿë @Pâ   </div><div class='line' id='LC9'>   ãşÿÿë PPâw   á  ãşÿÿë PPâh    ”åà1Ÿå RáM  </div><div class='line' id='LC10'>ØŸåØŸåşÿÿë   ã á  ãşÿÿë PPâi    ”å¬1Ÿå RáS  </div><div class='line' id='LC11'>¤Ÿå¨Ÿåşÿÿë  áşÿÿë   ãşÿÿë”AŸå”Ÿå|aŸåŸåşÿÿë  áˆŸåşÿÿëÀ ã `„å` ã`„å`†à `„å^`†â$`„å` ã(`„å`†à0`„å`†à8`„å`†âH`„å`†àP`„å`†à 0 ãà ãP ãX`„å`†â\0„å0„å0„å0„å40„åD0„åL0„åT0„åŸå+ ã„ „â,À„å&lt;P„å@à„å€`„åP„åà„åÀ„åşÿÿë0 ãØŸå+ ã„4„åĞ Ÿåşÿÿë</div><div class='line' id='LC12'>  ê0”å Sã®ÿÿ á¨ Ÿå˜ Ÿåşÿÿë  áşÿÿë   ãşÿÿëœ Ÿåœ0Ÿå   ã  ƒå” Ÿå”0Ÿå  ƒåp€½è0”å Sã¨ÿÿëÿÿêDŸåx Ÿåşÿÿë  áşÿÿë   ãşÿÿë  Uãêÿÿª¤ÿÿêŸåT ŸåşÿÿëôÿÿêŸåH Ÿåşÿÿëğÿÿê$frr   Ì   ø       (   €   ”  ¨   ´   ˆ                  D   0   `   ğO-é4ĞMâ  á  Qã$âåÀ2Ÿå` á å P ã “è,På ‚è¤  </div><div class='line' id='LC13'> ãşÿÿë  Pã å à  </div><div class='line' id='LC14'>  áşÿÿë @ á  áşÿÿëå  Qã{  </div><div class='line' id='LC15'>0å Sã 0   v  ê  “å0ƒâ Rã  </div><div class='line' id='LC16'>P…â Uáøÿÿ: À ãâ€àåpÔå°€Ôá  á ÀåÀåŸå,Àâ$ â0 ãÀåşÿÿë PPâu   Ôå°Ôá—à’à	`†à¡à°á—à  </div><div class='line' id='LC17'>`å€ á ã   ê‚d†à…à0 á  á èşÿÿë  PãQ   Ôå°ÔáP…à‘à¡ Uáñÿÿ:  áşÿÿë  á   ã   áşÿÿë `PâH   Ôå°0Ôá’àÃP°á  </div><div class='line' id='LC18'>€å á° ã   ê‚„ˆà†à0 á	  á </div><div class='line' id='LC19'>èşÿÿë  Pã.   Ôå°0Ôá`†à“àÃP á UáğÿÿŠ Sá  š ` ã€ ã   ê‚¤Šà…à</div><div class='line' id='LC20'>0 á  á@èşÿÿë  Pã   Ôå°0ÔáP…à“à SáñÿÿŠ À ãà ã(àå  á,àâ$ â°Ÿå0 ãàå ÀåÀåşÿÿë @Pâ   åşÿÿë  á4Ğâğ½è P ãÿÿêxŸåx Ÿåşÿÿëæÿÿêp ŸådŸåşÿÿë àãòÿÿêTŸå\ ŸåşÿÿëİÿÿêDŸåP Ÿåşÿÿë åşÿÿë àãçÿÿê8 Ÿå$Ÿåşÿÿë àãâÿÿêƒâ$ Ÿåşÿÿë àãİÿÿê4   6  &lt;   T     8  $      p@-é ãşÿÿë @PâPà   </div><div class='line' id='LC21'>   ãşÿÿë PPâ.   á  ãşÿÿë PPâ%    ”å¼0Ÿå Rá  </div><div class='line' id='LC22'>´Ÿå´ Ÿåşÿÿë ã  áşÿÿë¤Ÿå¤ Ÿå  áşÿÿë   ã á  ãşÿÿë PPâ    áşÿÿë   ãşÿÿë  áp€½è0”å Sãæÿÿ á  ãşÿÿë PPâäÿÿ</div><div class='line' id='LC23'>&lt;ŸåH Ÿåşÿÿëíÿÿê,Ÿå&lt; ŸåşÿÿëéÿÿêŸå0 ŸåşÿÿëåÿÿêŸå$ Ÿåşÿÿëáÿÿê$frrP   °      ”  p  D   0   ”  ğG-é¤pŸå @ ã € á  á` áP á á  ê0–å Sá  </div><div class='line' id='LC24'>P…âK„â Uã`†â@„â  </div><div class='line' id='LC25'>0‡àî=Câ Uã&lt;0CâñÿÿÚ 0“å Eâ Sáğÿÿ$‚à‰à„ €â</div><div class='line' id='LC26'> á+ ãP…âşÿÿëK„â Uã`†â@„âêÿÿğG½èşÿÿê 0šå0†åßÿÿê        °°°€,   °°°€0   °°®€à   _„€ü  °°ª€h  °¯€h  °°ª€  °°®€read_param_block    load_param_value    param_init        write_param_block   save_param_value    get_param_value set_param_value save_param_value    &lt;3&gt;%s: wrong address</div><div class='line' id='LC27'>   &lt;3&gt;%s: read page error</div><div class='line' id='LC28'> &lt;3&gt;%s: open error</div><div class='line' id='LC29'>  &lt;3&gt;%s: read param error</div><div class='line' id='LC30'>    &lt;3&gt;%s: read backup param error</div><div class='line' id='LC31'> &lt;3&gt;%s -&gt; relocated to default value!</div><div class='line' id='LC32'>   I8315XXIE00 console=ttySAC2,115200  &lt;3&gt;%s: no param info in first param block</div><div class='line' id='LC33'>  &lt;3&gt;%s: no param info in backup param block</div><div class='line' id='LC34'> &lt;3&gt;%s: ioctl error</div><div class='line' id='LC35'> &lt;3&gt;%s: erase block error</div><div class='line' id='LC36'>   &lt;3&gt;%s: write page error</div><div class='line' id='LC37'>    &lt;3&gt;%s: write backup param error</div><div class='line' id='LC38'>    &lt;3&gt;%s: write param error</div><div class='line' id='LC39'>   &lt;3&gt;%s: main block is invalid, not backing up.</div><div class='line' id='LC40'>                         depends=    vermagic=2.6.35.9 mod_unload ARMv6              param                                                                                                                                                                                                                                                                                                                                GNU ´yOÙ$ŸÕé{öU?PÉÿ GCC: (crosstool-NG-1.7.1) 4.4.3  GCC: (crosstool-NG-1.7.1) 4.4.3 A%   aeabi    6K 	 .symtab .strtab .shstrtab .rel.text .ARM.extab .rel.ARM.exidx .rodata __ksymtab_strings .rodata.str1.4 .rel__ksymtab .modinfo .data .rel.gnu.linkonce.this_module .note.gnu.build-id .bss .comment .note.GNU-stack .ARM.attributes                                                      4   D	                    	           È  ø              %             x	                     4     p‚       x	  @                 0   	           À  H               ?             ¸	  d                  G             </div><div class='line' id='LC41'>  4                  Y      2       P</div><div class='line' id='LC42'>  à                l             0                    h   	             0      	         v             H  0                               x                     ‰             x  H                 …   	           8                 £             À  $                  ¶             ä  ”                 »              ä  B                  Ä              &amp;                     Ô     p        &amp;  &amp;                                L  ä                                H        5         	              H  »                 ´   B  Ü     ø   K    I    O  Ğ  D  ä  D  ğ    ô    ø      L    C  (  J  L  D  \  J  €  D  ˆ  H    E  ¤  D  °  F  \  B  t  B  ”  8  œ  H  ¤  E  à  D  è  H  ğ  E    D    D  $    (    ,    0    4    8    @    D    H    L  :  P  9  T  @  X  ?  \    `    d    ¤  L  ¼  K  È  I  &lt;  =  Œ  O  ´  G  Ä  N    M  X  M  ¨  =  ¸  H  Ø  D  è  D  ü  D    D    H  (  D  &lt;  D  H    P    T    X    \    `    d    p  L  „  C  ˜  J  ¼  D  È  F  Ø  8  è  ;  ø  H     E     ;  4  D  D  D  T  D  d  D  p    t    x    €    „    ˆ    Œ    	  B  0	  &gt;  @	        *       6     *     *     *      *  (   *  0   *  8   *      @          :          &gt;       ¼   &lt;  8  7                                                                                                                   	                                                                                                                             ñÿ	                 (             ,        	   ,          	   0             Ü          	   à             ğ            ü  l    	   ü                      	   h            H         	   h            l         	               @	         %            4           C   (        R   4           4          ^   &lt;        m   P        |            –           °            Ë           	              	 å          	 ÿ          	       ”    '           ñÿ3      	     D     $        ¼          T      H    b             y  ,        ˆ                          £    ´     ³  h       Å  ü  l    Ñ             Û  h  (    ì                0   °           ,                  '             0             7             A             K             Y             _             q  à       ‚             “             ›             ¥             ²              param.c $a $d param_exit param_init __func__.18180 __func__.18221 __func__.18345 C.213.18121 __func__.18106 __func__.18251 __kstrtab_get_param_value __kstrtab_set_param_value __kstrtab_save_param_value __ksymtab_get_param_value __ksymtab_set_param_value __ksymtab_save_param_value param_status param.mod.c __module_depends __mod_vermagic5 __this_module __aeabi_unwind_cpp_pr0 cleanup_module memcpy sec_set_param_value set_param_value write_param_block init_module BML_IOCtl save_param_value sec_get_param_value get_param_value is_valid_param strlcpy BML_Open printk BML_Close __memzero __aeabi_uidiv vfree xsr_get_part_spec read_param_block xsr_get_vol_spec vmalloc BML_Write BML_EraseBlk BML_Read </div></pre></div>
+              
+            
+          </td>
+        </tr>
+      </table>
+    
+  </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  </div>
+
+
+
+<div class="frame frame-loading" style="display:none;">
+  <img src="/images/modules/ajax/big_spinner_336699.gif">
+</div>
+    </div>
+  
+      
+    </div>
+
+    <div id="footer" class="clearfix">
+      <div class="site">
+        <div class="sponsor">
+          <a href="http://www.rackspace.com" class="logo">
+            <img alt="Dedicated Server" src="https://assets1.github.com/images/modules/footer/rackspace_logo.png?v2?47cb04938970e27960b000394e25d106da82d0b6" />
+          </a>
+          Powered by the <a href="http://www.rackspace.com ">Dedicated
+          Servers</a> and<br/> <a href="http://www.rackspacecloud.com">Cloud
+          Computing</a> of Rackspace Hosting<span>&reg;</span>
+        </div>
+
+        <ul class="links">
+          <li class="blog"><a href="https://github.com/blog">Blog</a></li>
+          <li><a href="http://support.github.com">Support</a></li>
+          <li><a href="https://github.com/training">Training</a></li>
+          <li><a href="http://jobs.github.com">Job Board</a></li>
+          <li><a href="http://shop.github.com">Shop</a></li>
+          <li><a href="https://github.com/contact">Contact</a></li>
+          <li><a href="http://develop.github.com">API</a></li>
+          <li><a href="http://status.github.com">Status</a></li>
+        </ul>
+        <ul class="sosueme">
+          <li class="main">&copy; 2011 <span id="_rrt" title="0.05150s from fe6.rs.github.com">GitHub</span> Inc. All rights reserved.</li>
+          <li><a href="/site/terms">Terms of Service</a></li>
+          <li><a href="/site/privacy">Privacy</a></li>
+          <li><a href="https://github.com/security">Security</a></li>
+        </ul>
+      </div>
+    </div><!-- /#footer -->
+
+    
+      
+      
+        <!-- current locale:  -->
+        <div class="locales">
+          <div class="site">
+
+            <ul class="choices clearfix limited-locales">
+              <li><span class="current">English</span></li>
+              
+                  <li><a rel="nofollow" href="?locale=de">Deutsch</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=fr">FranÃ§ais</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=ja">æ—¥æœ¬èª</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=pt-BR">PortuguÃªs (BR)</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=ru">Ğ ÑƒÑÑĞºĞ¸Ğ¹</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=zh">ä¸­æ–‡</a></li>
+              
+              <li class="all"><a href="#" class="minibutton btn-forward js-all-locales"><span><span class="icon"></span>See all available languages</span></a></li>
+            </ul>
+
+            <div class="all-locales clearfix">
+              <h3>Your current locale selection: <strong>English</strong>. Choose another?</h3>
+              
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=en">English</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=af">Afrikaans</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=ca">CatalÃ </a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=cs">ÄŒeÅ¡tina</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=de">Deutsch</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=es">EspaÃ±ol</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=fr">FranÃ§ais</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=hr">Hrvatski</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=id">Indonesia</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=it">Italiano</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=ja">æ—¥æœ¬èª</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=nl">Nederlands</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=no">Norsk</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=pl">Polski</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=pt-BR">PortuguÃªs (BR)</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=ru">Ğ ÑƒÑÑĞºĞ¸Ğ¹</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=sr">Ğ¡Ñ€Ğ¿ÑĞºĞ¸</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=sv">Svenska</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=zh">ä¸­æ–‡</a></li>
+                  
+                </ul>
+              
+            </div>
+
+          </div>
+          <div class="fade"></div>
+        </div>
+      
+    
+
+    <script>window._auth_token = "eae90876e721e2c1c367282e5f5325e2d23cf9bb"</script>
+    <div id="keyboard_shortcuts_pane" style="display:none">
+  <h2>Keyboard Shortcuts</h2>
+
+  <div class="columns threecols">
+    <div class="column first">
+      <h3>Site wide shortcuts</h3>
+      <dl class="keyboard-mappings">
+        <dt>s</dt>
+        <dd>Focus site search</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>?</dt>
+        <dd>Bring up this help dialog</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column middle">
+      <h3>Commit list</h3>
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selected down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selected up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>t</dt>
+        <dd>Open tree</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>p</dt>
+        <dd>Open parent</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>c <em>or</em> o <em>or</em> enter</dt>
+        <dd>Open commit</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column last">
+      <h3>Pull request list</h3>
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selected down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selected up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>o <em>or</em> enter</dt>
+        <dd>Open issue</dd>
+      </dl>
+    </div><!-- /.columns.last -->
+  </div><!-- /.columns.equacols -->
+
+  <div class="rule"></div>
+
+  <h3>Issues</h3>
+
+  <div class="columns threecols">
+    <div class="column first">
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selected down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selected up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>x</dt>
+        <dd>Toggle select target</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>o <em>or</em> enter</dt>
+        <dd>Open issue</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column middle">
+      <dl class="keyboard-mappings">
+        <dt>I</dt>
+        <dd>Mark selected as read</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>U</dt>
+        <dd>Mark selected as unread</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>e</dt>
+        <dd>Close selected</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>y</dt>
+        <dd>Remove selected from view</dd>
+      </dl>
+    </div><!-- /.column.middle -->
+    <div class="column last">
+      <dl class="keyboard-mappings">
+        <dt>c</dt>
+        <dd>Create issue</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>l</dt>
+        <dd>Create label</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>i</dt>
+        <dd>Back to inbox</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>u</dt>
+        <dd>Back to issues</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>/</dt>
+        <dd>Focus issues search</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <h3>Network Graph</h3>
+  <div class="columns equacols">
+    <div class="column first">
+      <dl class="keyboard-mappings">
+        <dt>â† <em>or</em> h</dt>
+        <dd>Scroll left</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>â†’ <em>or</em> l</dt>
+        <dd>Scroll right</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>â†‘ <em>or</em> k</dt>
+        <dd>Scroll up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>â†“ <em>or</em> j</dt>
+        <dd>Scroll down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>t</dt>
+        <dd>Toggle visibility of head labels</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column last">
+      <dl class="keyboard-mappings">
+        <dt>shift â† <em>or</em> shift h</dt>
+        <dd>Scroll all the way left</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>shift â†’ <em>or</em> shift l</dt>
+        <dd>Scroll all the way right</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>shift â†‘ <em>or</em> shift k</dt>
+        <dd>Scroll all the way up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>shift â†“ <em>or</em> shift j</dt>
+        <dd>Scroll all the way down</dd>
+      </dl>
+    </div><!-- /.column.last -->
+  </div>
+
+</div>
+    
+
+    <!--[if IE 8]>
+    <script type="text/javascript" charset="utf-8">
+      $(document.body).addClass("ie8")
+    </script>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <script type="text/javascript" charset="utf-8">
+      $(document.body).addClass("ie7")
+    </script>
+    <![endif]-->
+
+    <script type="text/javascript">
+      _kmq.push(['trackClick', 'entice-signup-button', 'Entice banner clicked']);
+      
+    </script>
+    
+  </body>
+</html>
+

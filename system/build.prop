@@ -8,10 +8,10 @@ ro.build.version.codename=REL
 ro.build.version.release=2.2
 ro.build.date=Wed Jun 30 13:58:00 PDT 2010
 ro.build.date.utc=1277931480
-ro.build.type=eng
-ro.build.user=android-build
-ro.build.host=android-test-25.mtv.corp.google.com
-ro.build.tags=test-keys
+ro.build.type=userdebug
+ro.build.user=root
+ro.build.host=S8000-dev-criminal
+ro.build.tags=release-keys
 ro.product.model=GT-S8000
 ro.product.brand=samsung
 ro.product.name=GT-S8000
@@ -22,30 +22,30 @@ ro.product.manufacturer=Samsung
 ro.product.locale.language=en
 ro.product.locale.region=US
 ro.wifi.channels=
-ro.board.platform=
+ro.board.platform=s3c6410
 # ro.build.product is obsolete; use ro.product.device
-ro.build.product=generic
+ro.build.product=GT-S8000
 # Do not try to parse ro.build.description or .fingerprint
-ro.build.description=sdk-eng 2.2 FRF91 43546 test-keys
-ro.build.fingerprint=generic/sdk/generic/:2.2/FRF91/43546:eng/test-keys
+ro.build.description=jet-eng 2.2 FRF91 43546 test-keys
+ro.build.fingerprint=samsung/GT-S8000/GT-S8000/GT-S8000:2.2/FRF91/60505:user/release-keys
 # end build properties
 #
-# system.prop for generic sdk 
+# system.prop for GT-S8000
 #
 
-rild.libpath=/system/lib/libreference-ril.so
+rild.libpath=/system/lib/libsec-ril.so
 rild.libargs=-d /dev/ttyS0
 
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
 ro.sf.lcd_density=240
-ro.config.notification_sound=OnTheHunt.ogg
-ro.config.alarm_alert=Alarm_Classic.ogg
-media.stagefright.enable-player=true
-media.stagefright.enable-meta=true
-media.stagefright.enable-scan=true
-media.stagefright.enable-http=true
+#ro.config.notification_sound=OnTheHunt.ogg
+#ro.config.alarm_alert=Alarm_Classic.ogg
+#media.stagefright.enable-player=true
+#media.stagefright.enable-meta=true
+#media.stagefright.enable-scan=true
+#media.stagefright.enable-http=true
 ro.kernel.android.checkjni=1
 ro.setupwizard.mode=OPTIONAL
 xmpp.auto-presence=true
